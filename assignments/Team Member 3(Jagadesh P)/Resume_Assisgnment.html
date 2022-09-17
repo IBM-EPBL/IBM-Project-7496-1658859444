@@ -1,0 +1,143 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: rgb(253, 254, 255);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: medium;
+		}
+		.full {
+			width: 50%;
+			max-width: 1000px;
+			min-height: 100px;
+			background-color: rgb(245, 239, 231);
+			margin: 0px;
+			display: grid;
+            grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: fit-content(250px) fit-content(550px) 1fr;
+			border-style:ridge;
+		}
+		.header{
+			grid-column: 1 /5;
+            grid-row: 1 / 2;
+			background-color: rgb(205, 212, 231);
+		}
+		.left {
+			background-color: rgb(212, 232, 211);
+			padding: 20px;
+			grid-column: 1/2;
+            grid-row: 2 / 2;
+		}
+		.right {
+			background-color: rgb(219, 222, 209);
+			padding: 20px;
+			grid-column: 2/2;
+            grid-row: 2 / 2;
+		}
+		h2 {
+			background-color: white;
+			font-size:larger;
+		}
+		td{
+			padding-bottom: 20px;
+		}
+		.project li{font-weight: bold;}
+		.project ul{font-weight: lighter;}
+	</style>
+</head>
+
+<body>
+	<div class="full">
+		<div class="header">
+				<img src="C:\Users\heman\Pictures\2162.jpg" alt="gfg-logo"	style="width:80px;height:100px;border-radius:45%;margin-left: 40px;float:left;margin-right: 20px;">
+				<p style="margin-top: 30px;"><span style="font-weight: bold;font-size: 40px;">HEMANATHAN C</span></br>
+				<span style="font-weight: bold;font-size: 15px;">Software Engineer</span>
+		</div>
+		<div class="left">
+			<div class="Contact">
+				<h2>Contact</h2>	
+				<p><b>Email id:</b><br>hemanathanc7@gmail.com</p>
+				<p><b>Mobile no :</b>8524998472</p>
+			</div>
+			<div class="Skills">
+				<h2>Skills</h2>
+				<ul>
+					<li>C/C++</li>
+					<li>Java</li>
+					<li>Python</li>
+					<li>HTML/CSS</li>
+				</ul>
+			</div>
+			<div class="Language">
+				<h2>Language</h2>
+				<ul>
+					<li>English</li>
+					<li>Hindi</li>
+				</ul>
+			</div>
+			<div class="Hobbies">
+				<h2>Hobbies</h2>
+				<ul>
+					<li>Playing volleyBall</li>
+					<li>Reading Books</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div class="Summary">
+				<h2>Summary</h2>
+				<p>To secure a challenging position in a reputable organization	to expand my learning knowledge and skill</p>
+			</div>
+			<div class="Experience">
+				<h2>Experience</h2>
+				<h3>Exposys Data Labs - Web Developer as Intern</h3>
+				<p>February 2022 to March 2022</p>
+			</div>
+			<div class="Education">
+				<h2>Education</h2>
+				<table>
+					<tr>
+						<td style="width:20%;">2019-2023</td>
+						<td><p><span style="font-weight: bold;">B.E Computer Science And Engineering</span><br>Rajalakshmi Engineering College,Thandalam.<br>Percentage: 84.5(CGPA:8.4)</p></td>
+					</tr>
+					<tr>
+						<td>2018-2019</td>
+						<td><p><span style="font-weight: bold;">12th Computer Science</span><br>Thalapathy K Vinayagam Matric Higher Secondary School,Tiruttani<br>Percentage: 92.33</p></td>
+					</tr>
+					<tr>
+						<td>2016-2017</td>
+						<td><p><span style="font-weight: bold;">10th</span><br>Thalapathy K Vinayagam Matric Higher Secondary School,Tiruttani<br>Percentage: 96.6</p></td>
+					</tr>
+				</table>
+			</div>
+			<div class="project">
+				<h2>Projects</h2>
+				<ul>
+					<li>C Program 
+						<ul>1. Movie Ticket Reservation.</ul></li>
+					<li>Python  
+						<ul>1. Online Shopping. </ul></li>
+					<li>Java
+						<ul>1. Online Voting System. </ul>
+					<li> Android App								
+						<ul>1. Android Voting System. </ul></li>
+					<li>Web Development 
+						<ul>1. Hospital Management System.</ul> 
+						<ul>2. Simple Job Registration.</ul>
+						<ul> 3. Criminal Database Management System.</ul>
+						<ul> 4. Movie torrent Download site.</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
