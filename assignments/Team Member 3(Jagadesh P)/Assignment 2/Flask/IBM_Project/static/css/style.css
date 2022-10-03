@@ -1,0 +1,11 @@
+.container
+{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    width: 30pc;
+}
+h2{text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;}
+li a:hover,li a:active,li a:focus{background-color: blue;color:white;}
+li a{border-radius: 10px;color:black}
