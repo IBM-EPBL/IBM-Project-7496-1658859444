@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://hemu-first.s3.us-south.cloud-object-storage.appdomain.cloud/{{files[0]}}">
+    </head>
+   <body>
+      {% for a in range(1,len) %}
+         <div class="image">
+            <img src="https://hemu-first.s3.us-south.cloud-object-storage.appdomain.cloud/{{files[a]}}" width="150px"></td><br><br>
+         </div>
+      {% endfor %}
+   </body>
+</html>
