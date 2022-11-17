@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+        <style>
+            .container{
+                width: 40%;
+                margin:auto;
+                height: 100vh;
+            }
+            .table,tr{
+                padding:5px 5px;
+                margin:auto auto;
+            }
+            td{
+                padding:10px 10px;
+            }
+            img{
+                width:200px;
+                height: 200px;
+                display:block;
+                margin:auto;
+                padding-bottom: 30px;
+            }
+            h1{text-align: center;}
+            iconify-icon{font-size: 2rem;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Personal Information</h1>
+            <iconify-icon icon="mdi:pencil-circle-outline"></iconify-icon>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td>:</td>
+                    <td>{{values.fname}} {{values.lname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">E-Mail ID</th>
+                    <td>:</td>
+                    <td>{{values.email}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone Number</th>
+                    <td>:</td>
+                    <td>{{values.phone}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Company Name</th>
+                    <td>:</td>
+                    <td>{{values.cname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Address</th>
+                    <td>:</td>
+                    <td>{{values.address}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div> 
+    </body>
+</html>

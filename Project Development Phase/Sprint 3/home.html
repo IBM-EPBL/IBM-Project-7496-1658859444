@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IBM PROJECT</title>
+        <script src="/static/js/style.js"></script>
+        <script src="/static/js/home.js"></script>
+        <link rel="stylesheet" href="/static/css/home.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> 
+        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <!-- alertify -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+        <!-- jquery -->
+        <script src = " https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    </head>
+    <body id="body-pd">
+    <header class="header" id="header">
+        <div>INVENTORY MANAGEMENT SYSTEM</div>  
+    </header>
+    <div class="l-navbar" id="nav-bar"> 
+        <nav class="nav">
+            <div> 
+                <div class="nav_logo"><img src="/static/images/index.jpg" onerror="this.onerror=null; this.src='/static/images/Default.jpg';" alt="" onclick="profile()"> <span class="nav_logo-name">{{username}}</span> </div>
+                <div class="nav_list"> 
+                    <a href="javascript:;dashboard()" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span></a>
+                    <a href="#submenu1" aria-expanded="false" class="nav_link" id="dropdown1"><i class='bx bx-user nav_icon'></i> <span class="nav_name">Customers<span class='dropdown-toggle'></span></span></a>
+                        <div id='submenu1' class="collapse sidebar-submenu">
+                            <a href="#" class="list-group-item"><i class='bx bx-user-plus nav_icon' style="margin-right:10px"></i> <span class="nav_name">Add Customers</span></a>
+                            <a href="#" class="list-group-item"><iconify-icon class="nav_icon" icon="lucide:users" style="margin-right:10px"></iconify-icon> <span class="nav_name">All Customers</span></a>
+                        </div>
+                    <a href="#submenu2" aria-expanded="false" class="nav_link" id="dropdown2"><i class='bx bx-cart nav_icon'></i> <span class="nav_name">Items<span class='dropdown-toggle'></span></span></a>
+                        <div id='submenu2' class="collapse sidebar-submenu">
+                            <a href="#" class="list-group-item"><i class='bx bx-cart-add nav_icon' style="margin-right:10px"></i> <span class="nav_name">Add Items</span></a>
+                            <a href="#" class="list-group-item"><i class='bx bx-cart nav_icon' style="margin-right:10px"></i> <span class="nav_name">All Items</span></a>
+                        </div>
+                </div>
+            </div>
+            <div class="nav_list">  
+            <a href="javascript:;logout()" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div>
+        </nav>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#dropdown1').click(function(){
+                $('#submenu1').show(300);
+            });
+            $('#nav-bar').mouseleave(function(){
+                $('#submenu1').hide(300);
+            });
+            $('#dropdown2').click(function(){
+                $('#submenu2').show(300);
+            });
+            $('#nav-bar').mouseleave(function(){
+                $('#submenu2').hide(300);
+            });
+        });
+    </script>
+    <!--Container Main start-->
+    <div id="ajax"></div>
+    <!--Container Main end-->
+    </body>
+    </html>
