@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+:root{--header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #303437;
+    --white-color: #F7F6FB;
+    --body-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}*,::before,::after{box-sizing: border-box}
+
+body{position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s}
+a{text-decoration: none}
+.header{width: 100%;font-family: var(--body-font);
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: var(--white-color);
+    z-index: var(--z-fixed);
+    transition: .5s;
+    font-weight: bold;
+    font-size: 20px;}
+.header_toggle{color: var(--first-color);
+    font-size: 1.5rem;
+    cursor: pointer}
+.header_img{width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden}
+.header_img img{width: 40px;cursor: pointer;}
+.l-navbar{position: fixed;
+    top: 0;
+    left: -30%;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--first-color);
+    transition: .5s;
+    z-index: var(--z-fixed)}
+.nav{height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;}
+.nav_logo, .nav_link{display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem;}
+.nav_logo{margin-bottom: 2rem;
+    text-decoration: none;}
+.nav_logo-icon{font-size: 20px;
+    color: var(--white-color);
+    font-weight: bolder;}
+.nav_logo-name{color: var(--white-color);font-size: 20px;
+    font-weight: bold;font-family: var(--body-font);text-transform: uppercase;}
+.nav_link{position: relative;
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-size: 18px;
+    color: var(--white-color);
+    margin-bottom: 1.5rem;
+    transition: .3s}
+.nav_link:hover,.nav_link:focus{color: var(--white-color);font-weight: bold;}
+.nav_icon,iconify-icon{font-size: 1.25rem;font-weight: bold;}
+.dropdown-toggle{margin-left: 10px;}
+.sidebar-submenu{margin-left: 30px;
+    margin-top: -20px;
+    margin-bottom: 1rem;
+    border-radius: 10px;}
+.sidebar-submenu:focus{color: var(--white-color);font-weight: bold;}
+.sidebar-submenu .list-group-item{color:white;
+    background-color: #303437;
+    border:none;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+    font-size: 17px;
+    border-radius: 10px;}
+.sidebar-submenu .list-group-item:hover{color:#303437;background-color: white;font-weight: bold;transition: 0.3s;}
+.show{left: 0}
+/* .body-pd{padding-left: calc(var(--nav-width) + 1rem)} */
+.active{color: var(--white-color)}
+.active::before{content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: var(--white-color)}
+.height-100{height:100vh;}
+#ajax{margin-top: 70px;}
+img{width:28px;border-radius: 50%;height:28px;cursor: pointer;}
+.dropdown-menu a{text-decoration: none;;
+                padding:10px 10px;
+                border-radius: 5px;
+                color:black;
+                border:1px solid black;}
+.dropdown-menu a:hover{color:black;}
+.alertify-notifier .ajs-message.ajs-success{
+    color: white;
+    background-color: rgb(67, 166, 67);
+}
+@media screen and (min-width: 768px){body{margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem)}.header{height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem)}.header_img{width: 40px;
+    height: 40px}.header_img img{width: 45px}.l-navbar{left: 0;
+    padding: 1rem 1rem 0 0}.show{width: calc(var(--nav-width) + 156px)}.body-pd{padding-left: calc(var(--nav-width) + 188px)}};

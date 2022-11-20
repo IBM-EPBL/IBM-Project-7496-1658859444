@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="C:\Users\heman\Documents\files\Inventory Management System\static\css\progress.css">
+  <script>
+    $(function() {
+      $('#val').on('change paste keyup',function(){
+
+        $(".progress").each(function() {
+
+            var value = $('#val').val();
+            var left = $(this).find('.progress-left .progress-bar');
+            var right = $(this).find('.progress-right .progress-bar');
+
+            if (value > 0) 
+            {
+                if (value <= 50) 
+                {
+                    right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+                    left.css('transform','rotate(0deg)');
+                } 
+                else 
+                {
+                    right.css('transform', 'rotate(180deg)')
+                    left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+                }
+            }
+            else{
+              left.css('transform','rotate(0deg)');
+              right.css('transform','rotate(0deg)');
+            }
+        })
+      });
+        function percentageToDegrees(percentage) 
+        {
+            return percentage / 100 * 360
+        }
+
+    });
+</script>
+</head>
+<body>
+
+  <div class="container py-5">
+    
+    <input type="number" id="val">
+        <div class="row">      
+          <div class="col-xl-3 col-lg-6 mb-4">
+            <div class="bg-white rounded-lg p-5 shadow">
+              <h2 class="h6 font-weight-bold text-center mb-4">Overall progress</h2>
+      
+              <!-- Progress bar 1 -->
+              <button class="progress mx-auto" data-value='80'>
+                <span class="progress-left">
+                              <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                              <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div class="h4 font-weight-bold">80%</div>
+                </div>
+              </button>
+              <div class="row text-center mt-4">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            h1{text-align: center;}
+            table {
+                border-collapse: collapse;
+                margin:auto;
+            }
+            th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            }
+            th{
+                background-color: #84cac9;
+                color: white;
+            }
+        </style>
+        <script>
+         function profile(val)
+         {
+            $.ajax({
+               type:'POST',
+               url:'/display_item',
+               data:{val},
+               success: function(response)
+               {
+                     document.getElementById('ajax').innerHTML = response;
+               }
+            })
+         }
+        </script>
+    </head>
+   <body>
+    <h1>LIST OF Items</h1>
+      <table>
+         <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Manufacture Date</th>
+            <th>Expiry Date</th>
+            <th>Price</th>
+            <th>Actions</th>
+         </tr>
+         
+         {% for row in items %}
+            <tr>
+               <td>{{row["pid"]}}</td>
+               <td>{{row["pname"]}}</td>
+               <td>{{row["Category"]}}</td>
+               <td>{{row["mdate"]}}</td>
+               <td>{{row["edate"]}}</td>
+               <td>{{row["price"]}}</td>
+               <td><a href="javascript;display({{row[pid]}})">View</a></td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>

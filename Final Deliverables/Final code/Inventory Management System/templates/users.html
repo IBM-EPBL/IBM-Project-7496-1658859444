@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            h1{text-align: center;}
+            table {
+                border-collapse: collapse;
+                margin:auto;
+            }
+            th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            }
+            th{
+                background-color: #84cac9;
+                color: white;
+            }
+        </style>
+    </head>
+   <body>
+    <h1>LIST OF CUSTOMERS</h1>
+      <table>
+         <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Company Name</th>
+            <th>Address</th>
+         </tr>
+         
+         {% for row in users %}
+            <tr>
+               <td>{{row["fname"]}}</td>
+               <td>{{row["lname"]}}</td>
+               <td>{{row["email"]}}</td>
+               <td>{{row["phone"]}}</td>
+               <td>{{row["cname"]}}</td>
+               <td>{{row["address"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>

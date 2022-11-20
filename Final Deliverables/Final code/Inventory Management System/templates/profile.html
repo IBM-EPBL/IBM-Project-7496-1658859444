@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+        <style>
+            .container{
+                width: 40%;
+                margin:auto;
+                height: 100vh;
+            }
+            .table,tr{
+                padding:5px 5px;
+                margin:auto auto;
+            }
+            td{
+                padding:10px 10px;
+            }
+            img{
+                width:200px;
+                height: 200px;
+                display:block;
+                margin:auto;
+                padding-bottom: 30px;
+            }
+            h1{text-align: center;}
+            iconify-icon{font-size: 2rem;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Personal Information</h1>
+            <img src="" alt="/static/images/Default.jpg">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="row">First Name</th>
+                    <td>:</td>
+                    <td>{{data.fname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Last Name</th>
+                    <td>:</td>
+                    <td>{{data.lname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">E-Mail ID</th>
+                    <td>:</td>
+                    <td>{{data.email}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone Number</th>
+                    <td>:</td>
+                    <td>{{data.phone}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Company Name</th>
+                    <td>:</td>
+                    <td>{{data.cname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Address</th>
+                    <td>:</td>
+                    <td>{{data.address}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div> 
+    </body>
+</html>

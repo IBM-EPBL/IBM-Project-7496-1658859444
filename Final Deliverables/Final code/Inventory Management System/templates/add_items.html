@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        .container
+          {
+            font-family: 'Times New Roman', Times, serif;
+            color:black;
+            font-weight: bold;
+            padding-top:10px;
+            font-size: 15px;
+            width:40%;
+            margin:auto;
+          } 
+          h1
+          {
+            padding-top: 10px;
+            text-align: center;
+            font-weight:bold;
+            margin-bottom: 20px;;
+          }
+          button{margin-left: 40%;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add Product</h1>
+            <form action="{{url_for('validate_register')}}" method="post">
+              <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control" id="image" name="image" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="pid">Product ID:</label>
+                <input type="text" class="form-control" id="pid" placeholder="Enter Product ID" name="pid" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="pname">Product Name:</label>
+                <input type="text" class="form-control" id="pname" placeholder="Enter Product Name" name="pname" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="Category">Category:</label>
+                <input type="text" class="form-control" id="Category" placeholder="Enter Category" name="Category" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="mdate">Manufacture Date:</label>
+                <input type="date" class="form-control" id="mdate" placeholder="Enter Mfg.Date" name="mdate" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="edate">Expiry Date:</label>
+                <input type="date" class="form-control" id="edate" placeholder="Enter Expiry Date" name="edate" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" id="price" placeholder="Enter Price" name="price" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="qty">Quantity:</label>
+                <input type="number" class="form-control" id="qty" placeholder="Enter Quantity" name="qty" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="Desc">Description:</label>
+                <textarea class="form-control" id="desc" placeholder="Enter Description" name="desc"></textarea>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+    </body>
+</html>
